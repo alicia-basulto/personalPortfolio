@@ -15,6 +15,10 @@ export const NavBar = () => {
         const onScroll =()=>{
             if(window.scrollY > 50){
                 setScrolled(true);
+                    // Calculate new position 
+                    var newPositionTop =  window.scrollY + "px";
+                    // Apply the new position
+                    document.getElementById('canvas').style.top = newPositionTop;
             }else{
                 setScrolled(false);
             }
@@ -29,6 +33,7 @@ export const NavBar = () => {
     }
 
     return (
+        
     <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
         <Container>
             <Navbar.Brand href="#home">
