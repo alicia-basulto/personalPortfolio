@@ -374,15 +374,15 @@
             c.appendChild(u);
             var d = document.createElement("div");
             d.id = "fpsText",
-            d.style.cssText = "color:#0ff;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px",
+            d.style.cssText = "color:#FFC300;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px",
             d.innerHTML = "FPS",
             u.appendChild(d);
             var p = document.createElement("div");
             for (p.id = "fpsGraph",
-            p.style.cssText = "position:relative;width:74px;height:30px;background-color:#0ff",
+            p.style.cssText = "position:relative;width:74px;height:30px;background-color:#orange",
             u.appendChild(p); 74 > p.children.length; ) {
                 var f = document.createElement("span");
-                f.style.cssText = "width:1px;height:30px;float:left;background-color:#113",
+                f.style.cssText = "width:1px;height:30px;float:left;background-color:#FFC300",
                 p.appendChild(f)
             }
             var m = document.createElement("div");

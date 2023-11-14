@@ -2,6 +2,9 @@ import {useState, useEffect} from "react";
 import {Container, Row, Col} from "react-bootstrap"
 import {ArrowRightCircle} from "react-bootstrap-icons"
 import imageHeader from "../assets/img/header-img.svg"
+import headerImg from "../assets/img/header-img.svg";
+
+import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -9,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(100 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "software engineer", "Network engineer", "photographer" ];
+  const toRotate = [ "software engineer", "Network engineer", "Photographer" ];
   const period = 800;
 
   useEffect(() => {
@@ -44,23 +47,38 @@ export const Banner = () => {
       setIndex(prevIndex => prevIndex + 1);
     }
   }
+
+  const handleEmailButtonClick = () => {
+    window.location.href = 'mailto:alicia.basulto.c@gmail.com';
+  };
+  
   
     return(
-        <section className="banner" id="home"> 
-            <Container>
-                <Row className="align-itms-center">
-                    <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Welcome</span>
-                        <h1>{`Hi! I'm Alicia`} <span className="txt-rotate" dataPeriod="10" data-rotate='[ "software engineer", "Network engineer", "photographer" ]'><span className="wrap">{text}</span></span></h1>
-                        <p>description</p>
-                        <button onClick={()=> console.log('connect')}>Let's connect <ArrowRightCircle size={25}/></button>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}></Col>
-                    <img src={imageHeader} alt="Header image">
-
-                    </img>
-                </Row>
-            </Container>
-        </section>
+     
+      <section className="banner" id="home">
+      <Container>
+        <Row className="aligh-items-center">
+          <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <span className="tagline">Welcome to my Portfolio</span>
+                <h1>{`Hi! I'm Alicia`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software engineer", "Network engineer", "Photographer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>Graduated in Engineering of Specific Telecommunications Technologies specializing in Telematics. Currently as Solutions Specific Knowledge in NTTDATA since October 2020. Tech enthusiast developing cloud projects for AWS Solutions Architect certification.</p>
+                  <button onClick={handleEmailButtonClick}>Let’s Connect <ArrowRightCircle size={40} /></button>
+              </div>}
+            </TrackVisibility>
+          </Col>
+          <Col xs={12} md={6} xl={5}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img src={headerImg} alt="Header Img"/>
+                </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
+    </section>
     )
 }
