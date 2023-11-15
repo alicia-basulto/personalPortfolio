@@ -7,6 +7,7 @@ import { Skills } from './components/Skills'
 import { Projects } from './components/Projects'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Fragment } from 'react';
+import { Footer } from './components/Footer';
 function App() {
   return (
     <div>
@@ -17,6 +18,7 @@ function App() {
      <Banner/>
      <Skills/>
      <Projects />
+     <Footer />
     </div>
     </div>
   );

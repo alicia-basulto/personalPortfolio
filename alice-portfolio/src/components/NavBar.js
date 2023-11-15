@@ -3,8 +3,8 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import logo from '../assets/img/logo.svg'
 import navIconLikedIn from '../assets/img/nav-icon1.svg'
 import navIconGitHub from '../assets/img/nav-icon2.svg'
-import navIcon3 from '../assets/img/nav-icon3.svg'
-
+import navIconInstagram from '../assets/img/nav-icon3.svg'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -36,12 +36,11 @@ export const NavBar = () => {
     };
 
     const onUpdateActiveLink = (value) => {
-        window.
-            setActiveLink(value);
+        setActiveLink(value);
     }
 
     return (
-
+<Router>
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
             <Container>
                 <Navbar.Brand href="#home">
@@ -60,12 +59,15 @@ export const NavBar = () => {
                         <div className="social-icon">
                             <a href="https://es.linkedin.com/in/aliciabasulto" target="_blank"><img src={navIconLikedIn} alt="LinkedIN" /></a>
                             <a href="https://github.com/alicia-basulto" target="_blank" rel="noopener noreferrer"><img className="github-icon" src={navIconGitHub} alt="https://github.com/alicia-basulto" /></a>
-                            <a href="#"><img src={navIcon3} alt="" /></a>
+                            <a href="https://www.instagram.com/orbitphotos/?hl=es" target="_blank" rel="noopener noreferrer"><img src={navIconInstagram} alt="" /></a>
 
                         </div>
                         <button className="contact-button" onClick={handleEmailButtonClick}><span>Full CV</span></button>
                     </span>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>)
+        </Navbar>
+        </Router>
+          
+        )
 }
