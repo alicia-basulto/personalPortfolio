@@ -194,7 +194,7 @@
         ctx.lineWidth = 1;
 
         if (ctx.frame % 60 === 0) {
-            console.log(hue.update(), Math.round(hue.update()), hue.phase, hue.offset, hue.frequency, hue.amplitude);
+            //console.log(hue.update(), Math.round(hue.update()), hue.phase, hue.offset, hue.frequency, hue.amplitude);
         }
 
         for (var i = 0, tendril; i < settings.trails; i++) {
@@ -218,11 +218,8 @@
   function moveCanvas() {
    
     // Get the canvas element
-    
-    console.dir(document.getElementById('canvas').style.top);
     var canvas = document.getElementById('canvas') ;
     
-    console.dir(canvas)
     // Calculate new position (e.g., move 5 pixels down and 5 pixels right)
     var newPositionTop = parseInt(canvas.style.top) + 5 + "px";
     var newPositionLeft = parseInt(canvas.style.left) + 5 + "px";
