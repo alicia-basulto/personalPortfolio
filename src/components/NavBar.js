@@ -31,7 +31,7 @@ export const NavBar = () => {
     const handleEmailButtonClick = () => {
         const emailAddress = 'alicia.basulto.c@gmail.com';
         const subject = 'Portfolio: Request for Full CV';
-        const body = encodeURIComponent('Hello Alicia!\n\n My name is [YOUR NAME] and I am reaching out to express my interest in your profile. I would greatly appreciate it if you could provide me with your full CV for further consideration.\n\nThank you in advance for your time.\n\nBest regards,');
+        const body = 'Hello Alicia!\n\n My name is [YOUR NAME] and I am reaching out to express my interest in your profile. I would greatly appreciate it if you could provide me with your full CV for further consideration.\n\nThank you in advance for your time.\n\nBest regards,';
         const mailtoLink = `mailto:${encodeURIComponent(emailAddress)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.location.href = mailtoLink;
     };
