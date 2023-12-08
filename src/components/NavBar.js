@@ -4,7 +4,7 @@ import logo from '../assets/img/logo.svg'
 import navIconLikedIn from '../assets/img/nav-icon1.svg'
 import navIconGitHub from '../assets/img/nav-icon2.svg'
 import navIconInstagram from '../assets/img/nav-icon3.svg'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -58,7 +58,7 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://es.linkedin.com/in/aliciabasulto" target="_blank"><img src={navIconLikedIn} alt="LinkedIN" /></a>
+                            <a href="https://es.linkedin.com/in/aliciabasulto" target="_blank" rel="noopener noreferrer"><img src={navIconLikedIn} alt="LinkedIN" /></a>
                             <a href="https://github.com/alicia-basulto" target="_blank" rel="noopener noreferrer"><img className="github-icon" src={navIconGitHub} alt="https://github.com/alicia-basulto" /></a>
                             <a href="https://www.instagram.com/orbitphotos/?hl=es" target="_blank" rel="noopener noreferrer"><img src={navIconInstagram} alt="" /></a>
 

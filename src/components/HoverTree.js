@@ -1,3 +1,5 @@
+/* eslint-disable default-case */
+/* eslint-disable no-sequences */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-concat */
@@ -395,9 +397,9 @@
             for (y.id = "msGraph",
             y.style.cssText = "position:relative;width:74px;height:30px;background-color:#0f0",
             m.appendChild(y); 74 > y.children.length; ) {
-                var f = document.createElement("span");
-                f.style.cssText = "width:1px;height:30px;float:left;background-color:#131",
-                y.appendChild(f)
+                var fa = document.createElement("span");
+                fa.style.cssText = "width:1px;height:30px;float:left;background-color:#131",
+                y.appendChild(fa)
             }
             var v = function(e) {
                 switch (h = e) {
