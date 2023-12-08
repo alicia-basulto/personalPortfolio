@@ -1,4 +1,5 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-a11y/alt-text */
+
 import { Col, Row, Container, Tab, Nav } from "react-bootstrap";
 import caleidoscopioNew from "../assets/img/caleidoscopioNew.png"
 import caleidoscopioOld from "../assets/img/caleidoscopioOld.png"
